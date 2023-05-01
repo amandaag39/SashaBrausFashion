@@ -1,0 +1,27 @@
+[INFO] 19:43:06 Main:18 Some message
+[ERROR] 19:43:06 Main:19 Now I should see some message
+[INFO] 19:48:28 Main:18 Some message
+[ERROR] 19:48:28 Main:19 Now I should see some message
+[INFO] 19:48:28 Main:38 149.99
+[INFO] 19:51:59 Main:18 Some message
+[ERROR] 19:51:59 Main:19 Now I should see some message
+[INFO] 19:51:59 Main:38 149.99
+[WARN] 19:51:59 Main:42 Large
+[ERROR] 19:51:59 Main:46 Pants
+[TRACE] 19:51:59 Main:50 Backpack
+[INFO] 19:51:59 Main:54 Butterfly Kisses
+[DEBUG] 19:51:59 Main:58 115.0
+[INFO] 19:51:59 Main:62 Potter
+[INFO] 19:52:48 Main:18 Some message
+[ERROR] 19:52:48 Main:19 Now I should see some message
+[INFO] 19:52:48 Main:38 149.99
+[WARN] 19:52:48 Main:42 Large
+[ERROR] 19:52:48 Main:46 Pants
+[TRACE] 19:52:48 Main:50 Backpack
+[FATAL] 19:52:48 Main:54 Butterfly Kisses
+[DEBUG] 19:52:48 Main:58 115.0
+[INFO] 19:52:48 Main:62 Potter
+[INFO] 23:33:16 Main:20 Some message
+[ERROR] 23:33:16 Main:21 Now I should see some message
+[INFO] 23:33:16 Main:51 149.99
+[WARN] 23:33:16 Main:55 Large

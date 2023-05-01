@@ -1,12 +1,16 @@
+import main.java.sashabrausfashion.models.CartItem;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import sashabrausfashion.accessories.Bags;
-import sashabrausfashion.accessories.Hats;
-import sashabrausfashion.accessories.Jewelry;
-import sashabrausfashion.clothing.Bottoms;
-import sashabrausfashion.clothing.Dresses;
-import sashabrausfashion.clothing.Tops;
-import sashabrausfashion.models.CustomerInfo;
+import main.java.sashabrausfashion.accessories.Bags;
+import main.java.sashabrausfashion.accessories.Hats;
+import main.java.sashabrausfashion.accessories.Jewelry;
+import main.java.sashabrausfashion.clothing.Bottoms;
+import main.java.sashabrausfashion.clothing.Dresses;
+import main.java.sashabrausfashion.clothing.Tops;
+import main.java.sashabrausfashion.models.CustomerInfo;
+import main.java.sashabrausfashion.models.ShoppingCart;
+
+import java.util.function.DoubleToIntFunction;
 
 public class Main {
 
@@ -26,6 +30,25 @@ public class Main {
         Bags bags = new Bags("Fiona", 127.49, "Free","Emerald",1,"This is a backpack style bag.", "Backpack");
         Jewelry jewelry = new Jewelry("Butterfly Kisses", 349.99, "Free","Silver",0.01, "A silver necklace.","Necklace");
         Hats hats = new Hats("Chelsea",115,"Small", "Beige",0.2, "A sun hat.","Sun Hat");
+
+        //Create a ShoppingCart
+        ShoppingCart cart = new ShoppingCart();
+
+        //CartItems
+        CartItem cartItem1 = new CartItem(myDress,2);
+        CartItem cartItem2 = new CartItem(bags, 1);
+
+        // add the cart items to the shopping cart
+        cart.addItem(cartItem1);
+        cart.addItem(cartItem2);
+
+        //calculate total
+        double total = cart.getTotal();
+        double discount = cart.calculateDiscount(cartItem1);
+
+        //print Cart info
+        System.out.println("Total: " + total);
+        System.out.println("Discount: " + discount);
 
         //Instance of Customer
         CustomerInfo customerInfo = new CustomerInfo("Jamie","Potter","jpotter@gmail.com","StrongPassword123","123 Fake Street Chicago, IL 60617", "123 Fake Street Chicago, IL 60617", "773-867-5309");

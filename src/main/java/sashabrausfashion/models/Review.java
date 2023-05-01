@@ -1,7 +1,7 @@
-package sashabrausfashion.models;
+package main.java.sashabrausfashion.models;
 
 
-import sashabrausfashion.utilities.Reviewable;
+import main.java.sashabrausfashion.utilities.Reviewable;
 
 import java.sql.SQLException;
 import java.util.List;

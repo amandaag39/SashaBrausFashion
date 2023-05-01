@@ -1,4 +1,4 @@
-package sashabrausfashion.exceptions;
+package main.java.sashabrausfashion.exceptions;
 
 public class InvalidPaymentException extends Exception {
     public InvalidPaymentException() {}

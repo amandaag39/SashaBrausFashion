@@ -1,4 +1,4 @@
-package sashabrausfashion.exceptions;
+package main.java.sashabrausfashion.exceptions;
 
 public class OutOfStockException extends Exception {
     public OutOfStockException() {}

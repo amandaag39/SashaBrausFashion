@@ -1,4 +1,4 @@
-package sashabrausfashion.models;
+package main.java.sashabrausfashion.models;
 
 public class CustomerInfo {
     private String firstName;
