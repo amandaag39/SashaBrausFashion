@@ -1,4 +1,4 @@
-package main.java.sashabrausfashion.utilities;
+package sashabrausfashion.utilities;
 
 
 public interface Cartable {

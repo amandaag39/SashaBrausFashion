@@ -1,8 +1,8 @@
-package main.java.sashabrausfashion.models;
+package sashabrausfashion.models;
 
-import main.java.sashabrausfashion.utilities.Cartable;
-import main.java.sashabrausfashion.utilities.DiscountCalculator;
-import main.java.sashabrausfashion.custom.CustomLinkedList;
+import sashabrausfashion.utilities.Cartable;
+import sashabrausfashion.utilities.DiscountCalculator;
+import sashabrausfashion.custom.CustomLinkedList;
 
 public class ShoppingCart implements DiscountCalculator {
 

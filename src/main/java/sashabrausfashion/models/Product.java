@@ -1,6 +1,6 @@
-package main.java.sashabrausfashion.models;
+package sashabrausfashion.models;
 
-import main.java.sashabrausfashion.utilities.Reviewable;
+import sashabrausfashion.utilities.Reviewable;
 
 import java.util.ArrayList;
 import java.util.List;

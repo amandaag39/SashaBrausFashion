@@ -1,4 +1,4 @@
-package main.java.sashabrausfashion.models;
+package sashabrausfashion.models;
 import java.util.List;
 public class Order {
     private int orderId;

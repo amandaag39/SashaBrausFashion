@@ -1,6 +1,6 @@
-package main.java.sashabrausfashion.models;
+package sashabrausfashion.models;
 
-import main.java.sashabrausfashion.utilities.Cartable;
+import sashabrausfashion.utilities.Cartable;
 
 public class CartItem implements Cartable {
     private Product product;

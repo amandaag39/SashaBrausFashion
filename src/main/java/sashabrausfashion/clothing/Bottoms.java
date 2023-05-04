@@ -1,7 +1,7 @@
-package main.java.sashabrausfashion.clothing;
+package sashabrausfashion.clothing;
 
-import main.java.sashabrausfashion.models.Product;
-import main.java.sashabrausfashion.models.Review;
+import sashabrausfashion.models.Product;
+import sashabrausfashion.models.Review;
 
 import java.util.*;
 

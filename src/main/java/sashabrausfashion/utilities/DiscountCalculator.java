@@ -1,7 +1,7 @@
-package main.java.sashabrausfashion.utilities;
+package sashabrausfashion.utilities;
 
 
-import main.java.sashabrausfashion.models.CartItem;
+import sashabrausfashion.models.CartItem;
 
 public interface DiscountCalculator {
     double calculateDiscount(CartItem item);

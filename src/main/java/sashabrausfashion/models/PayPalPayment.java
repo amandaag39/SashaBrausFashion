@@ -1,6 +1,6 @@
-package main.java.sashabrausfashion.models;
+package sashabrausfashion.models;
 
-import main.java.sashabrausfashion.utilities.Payment;
+import sashabrausfashion.utilities.Payment;
 
 public class PayPalPayment implements Payment {
     private String paymentMethod;

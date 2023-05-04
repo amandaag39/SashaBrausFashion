@@ -1,7 +1,7 @@
-package main.java.sashabrausfashion.utilities;
+package sashabrausfashion.utilities;
 
-import main.java.sashabrausfashion.exceptions.NegativeWeightException;
-import main.java.sashabrausfashion.models.CartItem;
+import sashabrausfashion.exceptions.NegativeWeightException;
+import sashabrausfashion.models.CartItem;
 
 import java.util.List;
 

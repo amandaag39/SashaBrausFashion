@@ -1,4 +1,4 @@
-package main.java.sashabrausfashion.utilities;
+package sashabrausfashion.utilities;
 
 public final class Constants {
     public static final String BRAND_NAME = "Sasha Braus";

@@ -1,8 +1,8 @@
-package main.java.sashabrausfashion.models;
+package sashabrausfashion.models;
 
 
-import main.java.sashabrausfashion.exceptions.NegativeWeightException;
-import main.java.sashabrausfashion.utilities.ShippingCalculator;
+import sashabrausfashion.exceptions.NegativeWeightException;
+import sashabrausfashion.utilities.ShippingCalculator;
 
 import java.util.List;
 

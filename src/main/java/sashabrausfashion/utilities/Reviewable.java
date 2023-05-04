@@ -1,5 +1,5 @@
-package main.java.sashabrausfashion.utilities;
-import main.java.sashabrausfashion.models.Review;
+package sashabrausfashion.utilities;
+import sashabrausfashion.models.Review;
 
 import java.util.List;
 

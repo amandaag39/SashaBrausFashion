@@ -1,4 +1,4 @@
-package main.java.sashabrausfashion.utilities;
+package sashabrausfashion.utilities;
 import java.lang.reflect.Method;
 
 public interface Payment {

@@ -1,8 +1,8 @@
-package main.java.sashabrausfashion.accessories;
+package sashabrausfashion.accessories;
 
 
-import main.java.sashabrausfashion.models.Product;
-import main.java.sashabrausfashion.models.Review;
+import sashabrausfashion.models.Product;
+import sashabrausfashion.models.Review;
 
 import java.util.ArrayList;
 import java.util.Collection;

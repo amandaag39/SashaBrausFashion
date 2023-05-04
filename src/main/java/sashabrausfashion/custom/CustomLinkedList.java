@@ -1,4 +1,4 @@
-package main.java.sashabrausfashion.custom;
+package sashabrausfashion.custom;
 
 
 public class CustomLinkedList<T> {
