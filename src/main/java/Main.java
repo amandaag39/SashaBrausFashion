@@ -10,13 +10,42 @@ import sashabrausfashion.clothing.Tops;
 import sashabrausfashion.models.CustomerInfo;
 import sashabrausfashion.models.ShoppingCart;
 
+import java.io.File;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.function.DoubleToIntFunction;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.io.FileUtils;
+import java.io.File;
+import java.io.IOException;
+
 public class Main {
+
 
     private final static Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
+
+        //FileUtils
+        try {
+            String text = FileUtils.readFileToString(new File("C:\\Users\\Owner\\OneDrive\\Documents\\GitHub\\SashaBrausFashion\\TestFile"), "UTF-8");
+
+            //Split text into words using StringUtils.split
+            String[] words = StringUtils.split(text);
+
+            //count number of Unique words
+            Set<String> uniqueWords = new HashSet<String>(Arrays.asList(words));
+            int uniqueWordCount = uniqueWords.size();
+
+            //write the result to a file:
+            FileUtils.writeStringToFile(new File("result.text"), "Unique word count: " + uniqueWordCount, "UTF-8");
+//            System.out.println(text);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
 
         //Loggers
         LOGGER.info("Some message");
