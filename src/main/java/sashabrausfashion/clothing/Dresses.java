@@ -4,6 +4,7 @@ import sashabrausfashion.models.Product;
 import sashabrausfashion.models.Review;
 
 import java.util.*;
+import java.util.function.*;
 
 public class Dresses extends Product implements Collection<Dresses> {
     private String dressesType;
@@ -98,5 +99,41 @@ public class Dresses extends Product implements Collection<Dresses> {
     public void clear() {
         dressesList.clear();
     }
+
+
+    //lambda Overrides
+
+    //1. Predicate
+    @Override
+    public Predicate<Product> underOneHundred() {
+        return p -> getPrice() < 100.0;
+    }
+
+    //2. Consumer
+    @Override
+    public Consumer<Product> printName() {
+        return p -> System.out.println(p.getName());
+    }
+
+    //3. Function
+    @Override
+    public Function<Product,String> getDescriptionFunction() {
+        return p -> "Dress description: " + p.getDescription();
+    }
+
+    // 4. Supplier
+    @Override
+    protected Supplier<Product> getProductSupplier() {
+        return () -> new Dresses("New Dress", 50.0, "Medium", "blue", 1.0, "A beautiful new dress", "A-line");
+    }
+
+    // 5. UnaryOperator
+    @Override
+    public double applyTax(UnaryOperator<Double> taxOperator) {
+        double priceWithTax = taxOperator.apply(price);
+        return priceWithTax;
+    }
+
 }
+
 

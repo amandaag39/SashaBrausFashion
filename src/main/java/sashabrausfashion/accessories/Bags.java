@@ -1,5 +1,6 @@
 package sashabrausfashion.accessories;
 
+import sashabrausfashion.clothing.Dresses;
 import sashabrausfashion.models.Product;
 import sashabrausfashion.models.Review;
 
@@ -7,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class Bags extends Product implements Collection<Bags> {
     private String bagsType;
@@ -26,6 +28,11 @@ public class Bags extends Product implements Collection<Bags> {
         this.bagsType = bagsType;
     }
 
+    // 4. Supplier
+    @Override
+    protected Supplier<Product> getProductSupplier() {
+        return () -> new Bags("Camel Tote", 458.00, "Free", "Camel", 1, "A large, sturdy tote", "Tote");
+    }
     @Override
     public void printDescription() {
         System.out.println("This is a " + color + " " + size + "size " + bagsType + ".");

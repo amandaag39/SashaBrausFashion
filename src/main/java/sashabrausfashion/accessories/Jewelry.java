@@ -1,5 +1,6 @@
 package sashabrausfashion.accessories;
 
+import sashabrausfashion.clothing.Dresses;
 import sashabrausfashion.models.Product;
 import sashabrausfashion.models.Review;
 
@@ -7,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class Jewelry extends Product implements Collection<Jewelry> {
     private String jewelryType;
@@ -26,6 +28,11 @@ public class Jewelry extends Product implements Collection<Jewelry> {
         this.jewelryType = jewelryType;
     }
 
+    // 4. Supplier
+    @Override
+    protected Supplier<Product> getProductSupplier() {
+        return () -> new Jewelry("Ice Diamonds", 349.99, "Free", "Silver", 0.1, "A pair of diamond and silver formal earrings", "Earrings");
+    }
     @Override
     public void printDescription() {
         System.out.println("This is a " + color + " " + size + "size " + jewelryType + ".");

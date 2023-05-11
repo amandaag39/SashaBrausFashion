@@ -5,6 +5,7 @@ import sashabrausfashion.utilities.Reviewable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.function.*;
 
 public abstract class Product implements Reviewable {
     protected String name;
@@ -84,6 +85,43 @@ public abstract class Product implements Reviewable {
         this.weight = weight;
     }
 
+    //lambda function method declarations
+
+    // 1. Predicate
+    public Predicate<Product> underOneHundred() {
+        //default implementation
+        return p -> p.getPrice() < 100.0;
+    }
+
+    // 2. Consumer
+    public Consumer<Product> printName() {
+        return p -> System.out.println(p.getName());
+    }
+
+    // 3. Function
+    public Function<Product,String> getDescriptionFunction() {
+        return product -> product.getDescription();
+    }
+
+    // 4. Supplier
+
+    protected abstract Supplier<Product> getProductSupplier();
+
+    public List<Product> createProducts(int numProducts) {
+        List<Product> products = new ArrayList<>();
+        Supplier<Product> productSupplier = getProductSupplier();
+
+        for (int i = 0; i < numProducts; i++) {
+            products.add(productSupplier.get());
+        }
+        return products;
+    }
+
+    // 5. UnaryOperator
+    public double applyTax(UnaryOperator<Double> taxOperator) {
+        double priceWithTax = taxOperator.apply(price);
+        return priceWithTax;
+    }
 
 
     @Override

@@ -1,3 +1,4 @@
+import sashabrausfashion.enums.*;
 import sashabrausfashion.models.CartItem;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,25 +9,100 @@ import sashabrausfashion.clothing.Bottoms;
 import sashabrausfashion.clothing.Dresses;
 import sashabrausfashion.clothing.Tops;
 import sashabrausfashion.models.CustomerInfo;
+import sashabrausfashion.models.Product;
 import sashabrausfashion.models.ShoppingCart;
 
 import java.io.File;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.function.Consumer;
 import java.util.function.DoubleToIntFunction;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class Main {
-
 
     private final static Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
+
+        //5 lambda functions from the java.util.function package
+
+        //instantiate a product
+        Dresses vintageDress = new Dresses("Vintage Dress", 300.00, "Small", "Mustard", 1, "This is a vintage, 40s style mustard-color dress.", "A-line");
+
+        // 1. Predicate
+        Predicate<Product> underOneHundred = vintageDress.underOneHundred();
+        boolean isUnderOneHundred = underOneHundred.test(vintageDress);
+        System.out.println("Is the product under $100" + isUnderOneHundred);
+
+        //2. Consumer (Print's product's name)
+        vintageDress.printName().accept(vintageDress);
+
+        //3. Function
+        Function<Product,String> getDescription = vintageDress.getDescriptionFunction();
+        System.out.println(getDescription.apply(vintageDress));
+
+        // 4. Supplier
+        List<Product> dresses = vintageDress.createProducts(10);
+        for(Product d: dresses) {
+            System.out.println(d.toString());
+        }
+
+        // 5. UnaryOperator
+        double priceWithTax = vintageDress.applyTax(price ->price * 1.05);
+        System.out.println("Price with tax: $" + priceWithTax);
+
+
+        // 5 Complex enum examples:
+
+        //1 of 5 ClothingSize
+        ClothingSize small = ClothingSize.SMALL;
+        ClothingSize medium = ClothingSize.MEDIUM;
+        ClothingSize large = ClothingSize.LARGE;
+
+        System.out.println(small.getSize()); // Output: Small
+        System.out.println(medium.getIndex()); // Output: 1
+        System.out.println(large.toString()); // Output: LARGE
+
+        //2 of 5 ItemType
+        ItemType itemType = ItemType.BOTTOMS;
+        String displayName = itemType.getDisplayName();
+        System.out.println("Item type: " + displayName); // Output: Item type: Bottoms
+
+        //3 of 5 Color
+        System.out.println(Color.RED.getHexCode());
+
+        //4 of 5 Seasons
+        Season season = Season.SUMMER;
+        String displaySeasonName = season.getDisplayName();
+        System.out.println("Season: " + displaySeasonName); // Output: Season: Summer
+
+        //5 of 5
+        OccasionType occasion1 = OccasionType.WEDDING;
+        OccasionType occasion2 = OccasionType.FORMAL;
+
+        occasion1.addClothingItem("Wedding Dress");
+        occasion1.addClothingItem("Wedding Suit");
+        occasion1.addClothingItem("Wedding Shoes");
+
+        occasion2.addClothingItem("Formal Dress");
+        occasion2.addClothingItem("Formal Suit");
+        occasion2.addClothingItem("Formal Shoes");
+
+        for (OccasionType occasionType : OccasionType.values()) {
+            System.out.println("Available clothing items for " + occasionType.getOccasion() + " occasion type:");
+            for (String item : occasionType.getAvailableClothingItems()) {
+                System.out.println("- " + item);
+            }
+        }
 
         //FileUtils
         try {
@@ -47,9 +123,11 @@ public class Main {
             e.printStackTrace();
         }
 
+
         //Loggers
         LOGGER.info("Some message");
         LOGGER.error("Now I should see some message");
+
 
         //Instantiate some Products
 
@@ -59,6 +137,7 @@ public class Main {
         Bags bags = new Bags("Fiona", 127.49, "Free","Emerald",1,"This is a backpack style bag.", "Backpack");
         Jewelry jewelry = new Jewelry("Butterfly Kisses", 349.99, "Free","Silver",0.01, "A silver necklace.","Necklace");
         Hats hats = new Hats("Chelsea",115,"Small", "Beige",0.2, "A sun hat.","Sun Hat");
+
 
         //Create a ShoppingCart
         ShoppingCart cart = new ShoppingCart();
@@ -82,8 +161,8 @@ public class Main {
         //Instance of Customer
         CustomerInfo customerInfo = new CustomerInfo("Jamie","Potter","jpotter@gmail.com","StrongPassword123","123 Fake Street Chicago, IL 60617", "123 Fake Street Chicago, IL 60617", "773-867-5309");
 
-        //Test the methods
 
+        //Test some methods
 
         double priceOfDress = myDress.getPrice();
 //        System.out.println(priceOfDress); //This will print "149.99"

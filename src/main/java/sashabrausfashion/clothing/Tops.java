@@ -4,6 +4,7 @@ import sashabrausfashion.models.Product;
 import sashabrausfashion.models.Review;
 
 import java.util.*;
+import java.util.function.Supplier;
 
 public class Tops extends Product implements Collection<Tops> {
     private String topsType;
@@ -30,6 +31,11 @@ public class Tops extends Product implements Collection<Tops> {
         this.topsType = topsType;
     }
 
+    // 4. Supplier
+    @Override
+    protected Supplier<Product> getProductSupplier() {
+        return () -> new Tops("New Top", 50.0, "Medium", "blue", 1.0, "A beautiful new top", "T-Shirt");
+    }
     @Override
     public void printDescription() {
         System.out.println("This is a " + color + " " + size + "size " + topsType + ".");
