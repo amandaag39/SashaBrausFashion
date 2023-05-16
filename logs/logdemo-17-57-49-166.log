@@ -1,0 +1,28 @@
+[ERROR] 17:50:29 Main:141 Now I should see some message
+[INFO] 17:50:29 Main:181 149.99
+[WARN] 17:50:29 Main:185 Large
+[ERROR] 17:50:29 Main:189 Pants
+[TRACE] 17:50:29 Main:193 Backpack
+[FATAL] 17:50:29 Main:197 Butterfly Kisses
+[DEBUG] 17:50:29 Main:201 115.0
+[INFO] 17:50:29 Main:205 Potter
+[INFO] 17:55:29 Main:140 Some message
+[ERROR] 17:55:29 Main:141 Now I should see some message
+[INFO] 17:55:29 Main:181 149.99
+[WARN] 17:55:29 Main:185 Large
+[ERROR] 17:55:29 Main:189 Pants
+[TRACE] 17:55:29 Main:193 Backpack
+[FATAL] 17:55:29 Main:197 Butterfly Kisses
+[DEBUG] 17:55:29 Main:201 115.0
+[INFO] 17:55:29 Main:205 Potter
+[INFO] 17:57:13 Main:140 Some message
+[ERROR] 17:57:13 Main:141 Now I should see some message
+[INFO] 17:57:13 Main:181 149.99
+[WARN] 17:57:13 Main:185 Large
+[ERROR] 17:57:13 Main:189 Pants
+[TRACE] 17:57:13 Main:193 Backpack
+[FATAL] 17:57:13 Main:197 Butterfly Kisses
+[DEBUG] 17:57:13 Main:201 115.0
+[INFO] 17:57:13 Main:205 Potter
+[INFO] 17:57:49 Main:140 Some message
+[ERROR] 17:57:49 Main:141 Now I should see some message

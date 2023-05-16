@@ -22,6 +22,8 @@ import java.util.function.DoubleToIntFunction;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.io.FileUtils;
+import sashabrausfashion.utilities.ReflectionExample;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.function.Function;
@@ -124,6 +126,16 @@ public class Main {
         }
 
 
+        // Lesson 10 Homework: Collections Streaming
+        // 2/7 filter & forEach methods
+        Bags bags = new Bags();
+        bags.printFilteredProductsByPriceRange(150.00, 200.00);
+
+        //Lesson 10 Homework: Reflection
+
+        ReflectionExample reflectionExample = new ReflectionExample();
+        reflectionExample.runReflectionExample();
+
         //Loggers
         LOGGER.info("Some message");
         LOGGER.error("Now I should see some message");
@@ -134,7 +146,7 @@ public class Main {
         Dresses myDress = new Dresses("Tiffany", 149.99, "Small", "Floral", 1, "A small floral dress","Sundresses");
         Tops tops = new Tops("Minimalist Tank", 155.49, "Large", "White", 1.0, "A white large tanktop.","Tanks");
         Bottoms bottoms = new Bottoms("Intense Bell-bottoms", 189.97, "Extra-Small","Black",1.8, "An extra-small black pair of pants","Pants");
-        Bags bags = new Bags("Fiona", 127.49, "Free","Emerald",1,"This is a backpack style bag.", "Backpack");
+        Bags bagsInstance = new Bags("Fiona", 127.49, "Free","Emerald",1,"This is a backpack style bag.", "Backpack");
         Jewelry jewelry = new Jewelry("Butterfly Kisses", 349.99, "Free","Silver",0.01, "A silver necklace.","Necklace");
         Hats hats = new Hats("Chelsea",115,"Small", "Beige",0.2, "A sun hat.","Sun Hat");
 
@@ -144,7 +156,7 @@ public class Main {
 
         //CartItems
         CartItem cartItem1 = new CartItem(myDress,2);
-        CartItem cartItem2 = new CartItem(bags, 1);
+        CartItem cartItem2 = new CartItem(bagsInstance, 1);
 
         // add the cart items to the shopping cart
         cart.addItem(cartItem1);
@@ -176,8 +188,8 @@ public class Main {
 //        System.out.println(bottomsType1); //This will print "Pants"
         LOGGER.error(bottomsType1);
 
-        String bagsType1 = bags.getBagsType();
-//        System.out.println(bagsType1); //This will print "Backpack"
+        String bagsType1 = bagsInstance.getBagsType();
+//        System.out.println(bagsType1); //This will print "Tote"
         LOGGER.trace(bagsType1);
 
         String jewelryName = jewelry.getName();

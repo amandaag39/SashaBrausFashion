@@ -1,5 +1,6 @@
 package sashabrausfashion.clothing;
 
+import sashabrausfashion.accessories.Bags;
 import sashabrausfashion.models.Product;
 import sashabrausfashion.models.Review;
 
@@ -132,6 +133,24 @@ public class Dresses extends Product implements Collection<Dresses> {
     public double applyTax(UnaryOperator<Double> taxOperator) {
         double priceWithTax = taxOperator.apply(price);
         return priceWithTax;
+    }
+
+
+    //10: Collections Streaming
+    @Override
+    public List<Product> getProductList() {
+        List<Product> streamDressesList = new ArrayList<>();
+
+        //instances of bags
+        Dresses dress1 = new Dresses("Dress 1", 100.00, "Small", "Black", 1,"Description 1", "Type 1");
+        Dresses dress2 = new Dresses("Dress 2", 150.00, "Medium", "Red", 1, "Description 2", "Type 2");
+        Dresses dress3 = new Dresses("Dress 3", 200.0, "Large", "Blue", 1, "Description 3", "Type 3");
+
+        streamDressesList.add(dress1);
+        streamDressesList.add(dress2);
+        streamDressesList.add(dress3);
+
+        return streamDressesList;
     }
 
 }

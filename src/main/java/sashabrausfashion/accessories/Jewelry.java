@@ -107,5 +107,23 @@ public class Jewelry extends Product implements Collection<Jewelry> {
     public void clear() {
         jewelryList.clear();
     }
+
+
+    //10: Collections Streaming
+    @Override
+    public List<Product> getProductList() {
+        List<Product> streamJewelryList = new ArrayList<>();
+
+        //instances of bags
+        Jewelry jewelry1 = new Jewelry("Jewelry 1", 100.00, "Free", "Black", 1, "Description 1", "Type 1");
+        Jewelry jewelry2 = new Jewelry("Jewelry 2", 150.00, "Free", "Red", 1, "Description 2", "Type 2");
+        Jewelry jewelry3 = new Jewelry("Jewelry 3", 200.0, "Free", "Blue", 1, "Description 3", "Type 3");
+
+        streamJewelryList.add(jewelry1);
+        streamJewelryList.add(jewelry2);
+        streamJewelryList.add(jewelry3);
+
+        return streamJewelryList;
+    }
 }
 

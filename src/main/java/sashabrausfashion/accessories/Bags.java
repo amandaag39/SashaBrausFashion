@@ -9,15 +9,20 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 public class Bags extends Product implements Collection<Bags> {
     private String bagsType;
-    private final List<Bags> bagsList;
+    private List<Bags> bagsList;
 
     public Bags(String name, double price, String size, String color, double weight, String description, String bagsType) {
         super(name, price, size, color, weight, description);
         this.bagsType = bagsType;
         bagsList = new ArrayList<>();
+    }
+
+    public Bags() {
+        super();
     }
 
     public String getBagsType() {
@@ -106,4 +111,28 @@ public class Bags extends Product implements Collection<Bags> {
     public void clear() {
         bagsList.clear();
     }
+
+
+    //10: Collections Streaming
+    @Override
+    public List<Product> getProductList() {
+        List<Product> streamBagsList = new ArrayList<>();
+
+        //instances of bags
+        Bags bag1 = new Bags("Bag 1", 153.00, "Free", "Black", 1,"Description 1", "Type 1");
+        Bags bag2 = new Bags("Bag 2", 151.00, "Free", "Red", 1, "Description 2", "Type 2");
+        Bags bag3 = new Bags("Bag 3", 150.00, "Free", "Blue", 1, "Description 3", "Type 3");
+        Bags bag4 = new Bags("Bag 4", 179.00, "Free", "Green", 1, "Description 4", "Type 4");
+        Bags bag5 = new Bags("Bag 3", 150.00, "Free", "Blue", 1, "Description 3", "Type 3");
+
+        streamBagsList.add(bag1);
+        streamBagsList.add(bag2);
+        streamBagsList.add(bag3);
+        streamBagsList.add(bag5);
+        streamBagsList.add(bag4);
+
+        return streamBagsList;
+    }
+
+
 }

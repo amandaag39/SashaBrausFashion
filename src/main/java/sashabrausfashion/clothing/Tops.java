@@ -1,5 +1,6 @@
 package sashabrausfashion.clothing;
 
+import sashabrausfashion.accessories.Bags;
 import sashabrausfashion.models.Product;
 import sashabrausfashion.models.Review;
 
@@ -112,4 +113,20 @@ public class Tops extends Product implements Collection<Tops> {
         topsList.clear();
     }
 
+    //10: Collections Streaming
+    @Override
+    public List<Product> getProductList() {
+        List<Product> streamTopsList = new ArrayList<>();
+
+        //instances of bags
+        Tops top1 = new Tops("Top 1", 100.00, "Small", "Black", 1, "Description 1", "Type 1");
+        Tops top2 = new Tops("Top 2", 150.00, "Medium", "Red", 1, "Description 2", "Type 2");
+        Tops top3 = new Tops("Top 3", 200.0, "Large", "Blue", 1, "Description 3", "Type 3");
+
+        streamTopsList.add(top1);
+        streamTopsList.add(top2);
+        streamTopsList.add(top3);
+
+        return streamTopsList;
+    }
 }

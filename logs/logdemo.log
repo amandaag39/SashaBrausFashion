@@ -1,23 +1,25 @@
-[ERROR] 01:08:00 Main:162 Pants
-[TRACE] 01:08:00 Main:166 Backpack
-[FATAL] 01:08:00 Main:170 Butterfly Kisses
-[DEBUG] 01:08:00 Main:174 115.0
-[INFO] 01:08:00 Main:178 Potter
-[INFO] 01:38:47 Main:117 Some message
-[ERROR] 01:38:47 Main:118 Now I should see some message
-[INFO] 01:38:47 Main:158 149.99
-[WARN] 01:38:47 Main:162 Large
-[ERROR] 01:38:47 Main:166 Pants
-[TRACE] 01:38:47 Main:170 Backpack
-[FATAL] 01:38:47 Main:174 Butterfly Kisses
-[DEBUG] 01:38:47 Main:178 115.0
-[INFO] 01:38:47 Main:182 Potter
-[INFO] 01:39:21 Main:128 Some message
-[ERROR] 01:39:21 Main:129 Now I should see some message
-[INFO] 01:39:21 Main:169 149.99
-[WARN] 01:39:21 Main:173 Large
-[ERROR] 01:39:21 Main:177 Pants
-[TRACE] 01:39:21 Main:181 Backpack
-[FATAL] 01:39:21 Main:185 Butterfly Kisses
-[DEBUG] 01:39:21 Main:189 115.0
-[INFO] 01:39:21 Main:193 Potter
+[INFO] 17:57:49 Main:181 149.99
+[WARN] 17:57:49 Main:185 Large
+[ERROR] 17:57:49 Main:189 Pants
+[TRACE] 17:57:49 Main:193 Backpack
+[FATAL] 17:57:49 Main:197 Butterfly Kisses
+[DEBUG] 17:57:49 Main:201 115.0
+[INFO] 17:57:49 Main:205 Potter
+[INFO] 18:11:09 Main:140 Some message
+[ERROR] 18:11:09 Main:141 Now I should see some message
+[INFO] 18:11:09 Main:181 149.99
+[WARN] 18:11:09 Main:185 Large
+[ERROR] 18:11:09 Main:189 Pants
+[TRACE] 18:11:09 Main:193 Backpack
+[FATAL] 18:11:09 Main:197 Butterfly Kisses
+[DEBUG] 18:11:09 Main:201 115.0
+[INFO] 18:11:09 Main:205 Potter
+[INFO] 18:13:35 Main:140 Some message
+[ERROR] 18:13:35 Main:141 Now I should see some message
+[INFO] 18:13:35 Main:181 149.99
+[WARN] 18:13:35 Main:185 Large
+[ERROR] 18:13:35 Main:189 Pants
+[TRACE] 18:13:35 Main:193 Backpack
+[FATAL] 18:13:35 Main:197 Butterfly Kisses
+[DEBUG] 18:13:35 Main:201 115.0
+[INFO] 18:13:35 Main:205 Potter

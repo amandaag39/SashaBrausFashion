@@ -109,4 +109,22 @@ public class Hats extends Product implements Collection<Hats> {
     public void clear() {
         hatsList.clear();
     }
+
+
+    //10: Collections Streaming
+    @Override
+    public List<Product> getProductList() {
+        List<Product> streamHatsList = new ArrayList<>();
+
+        //instances of bags
+        Hats hat1 = new Hats("Hat 1", 100.00, "Free", "Black", 1,"Description 1", "Type 1");
+        Hats hat2 = new Hats("Hat 2", 150.00, "Free", "Red", 1, "Description 2", "Type 2");
+        Hats hat3 = new Hats("Hat 3", 200.0, "Free", "Blue", 1, "Description 3", "Type 3");
+
+        streamHatsList.add(hat1);
+        streamHatsList.add(hat2);
+        streamHatsList.add(hat3);
+
+        return streamHatsList;
+    }
 }

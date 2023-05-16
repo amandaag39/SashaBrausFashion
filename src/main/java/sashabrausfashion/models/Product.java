@@ -3,9 +3,11 @@ package sashabrausfashion.models;
 import sashabrausfashion.utilities.Reviewable;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.*;
+import java.util.stream.Collectors;
 
 public abstract class Product implements Reviewable {
     protected String name;
@@ -24,6 +26,10 @@ public abstract class Product implements Reviewable {
         this.weight = weight;
         this.description = description;
         this.reviews = new ArrayList<>();
+    }
+
+    public Product() {
+
     }
 
     public abstract void printDescription();
@@ -85,7 +91,7 @@ public abstract class Product implements Reviewable {
         this.weight = weight;
     }
 
-    //lambda function method declarations
+    //Lesson 9: lambda function method declarations
 
     // 1. Predicate
     public Predicate<Product> underOneHundred() {
@@ -123,6 +129,19 @@ public abstract class Product implements Reviewable {
         return priceWithTax;
     }
 
+
+    //Lesson 10: Collections Streaming (collections streaming pipeline)
+    public abstract List<Product> getProductList();
+        public void printFilteredProductsByPriceRange(double minPrice, double maxPrice) {
+            getProductList().stream()
+                .filter(product -> product.getPrice() >= minPrice && product.getPrice() <= maxPrice)
+                .distinct()
+                .sorted(Comparator.comparingDouble(Product::getPrice))
+                .limit(3)
+                .peek(product -> System.out.println("Filtered Product: " + product.getName() + ", Price: " + product.getPrice()))
+                .map(product -> "Name: " + product.getName() + ", Price: " + product.getPrice())  // Map products to desired format
+                .forEach(System.out::println);
+        }
 
     @Override
     public String toString() {
