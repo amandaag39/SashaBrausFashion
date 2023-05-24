@@ -127,7 +127,7 @@ public class Main {
 
 
         // Lesson 10 Homework: Collections Streaming
-        // 2/7 filter & forEach methods
+        // 7/7 filter & forEach methods
         Bags bags = new Bags();
         bags.printFilteredProductsByPriceRange(150.00, 200.00);
 
